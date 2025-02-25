@@ -1,9 +1,6 @@
-import { Component } from "react";
 import './card-list.styles.css';
 
-class CardList extends Component {
-  render() {
-    const { monsters } = this.props;
+const CardList = ({monsters}) =>{
     if (!monsters || !Array.isArray(monsters)) {
       return <h1>Loading...</h1>; 
     }
@@ -25,7 +22,6 @@ class CardList extends Component {
         })}
       </div>
     );
-  }
 }
 
 export default CardList;
