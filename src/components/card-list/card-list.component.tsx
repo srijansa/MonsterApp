@@ -1,6 +1,12 @@
 import './card-list.styles.css';
+import {Monsters} from '../../App';
+import React from 'react';
 
-const CardList = ({monsters}) =>{
+type CardProps = {
+  monsters : Monsters;
+}
+
+const CardList = ({monsters}:CardProps) => {
   if (!monsters || !Array.isArray(monsters)) {
     return <h1>Loading...</h1>; 
   }
